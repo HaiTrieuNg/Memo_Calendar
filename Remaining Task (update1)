@@ -1,0 +1,12 @@
+
+CS 151
+Final Project
+Remaining Tasks
+
+Export Button: implemented but still need to test and apply more logic
+
+Buttons edge cases (exp when nothing is chosen but the user clicks Delete or Edit, these buttons should do nothing)
+
+The navigation can go as far as the Gregorian Calendar can make it (for now, we allow 2000-2050, figured out that it  should be 1019-2999)
+
+When you click on a particular date, the current view on frame 2 will change accordingly (not pop up a new frame but change the frame)
