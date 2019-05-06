@@ -108,6 +108,7 @@ class TaskFrame extends JFrame implements ActionListener
 		
 		else if("Delete".equals(ae.getActionCommand()))
 		{
+			
 			if (tasks.getTask().getSize()>0)
 			{
 				ret = list.getSelectedIndex();
@@ -123,7 +124,7 @@ class TaskFrame extends JFrame implements ActionListener
 			JTextField textField= new JTextField(select,10);
 			
 			Object obj = select;
-			tasks.addAt(obj,0);
+			tasks.add(obj);
 		
 		}
 		
@@ -148,8 +149,8 @@ class TaskFrame extends JFrame implements ActionListener
 	
 	public static void main(String[] args) 
 	{
-	TaskFrame tf = new TaskFrame("", 1,"January", 2019);
-	tf.setVisible(true);
+		TaskFrame tf = new TaskFrame("", 1,"January", 2019);
+		tf.setVisible(true);
 	}
 	
 	
