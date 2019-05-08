@@ -482,8 +482,12 @@ public class CalendarFrame extends JFrame  implements ItemListener
 	 		    DayButtons[z][setmonth][ye]= new JButton();
 	 		    DayButtons[z][setmonth][ye].setText(Integer.toString(z+1));
 	 		   DayButtons[z][setmonth][ye].setForeground(Color.LIGHT_GRAY);
+	 		
 	 		   if (td.get(Calendar.DATE) == i+1 && td.get(Calendar.YEAR) == (int)spinner.getValue() && td.get(Calendar.MONTH) == monthindex)
-	 			{DayButtons[z][setmonth][ye].setForeground(Color.RED);}
+	 			{
+	 			 
+	 			DayButtons[z][setmonth][ye].setForeground(Color.RED);
+	 			}
 	 			DayButtons[z][setmonth][ye].setBorderPainted(false);
 	 			DayButtons[z][setmonth][ye].setFocusPainted(false);
 	 			DayButtons[z][setmonth][ye].setContentAreaFilled(false);
@@ -602,11 +606,6 @@ public class CalendarFrame extends JFrame  implements ItemListener
 	    cal.set((Integer)yModel.getValue(), monthindex, 1);//year, month,day
 		int offset = cal.get(Calendar.DAY_OF_WEEK) - 1;
 		
-	
-		
-		
-		
-		
 		
 		int ye = (Integer)yModel.getValue()-2000;
 		int dY =(Integer)yModel.getValue();
@@ -623,11 +622,29 @@ public class CalendarFrame extends JFrame  implements ItemListener
   		
   		pre.set((Integer)spinner.getValue(), setmonth, 1);
   		int z = pre.getActualMaximum(Calendar.DAY_OF_MONTH)-1;
+  		
+  		
+  		
+  		
+  		
+  		
+  		
+  		
+  		
+  		
+  		
+  		
+  		
+  		
+  		
+  		
   		for (int i =offset-1; i>=0; i--)
-  		{int o=z;
+  		{
+  			int o=z;
   		int set=setmonth;
   		int ya=ye;
   	
+  		
   		if (T[z][setmonth][ye]==null)
   		{
   			T[z][setmonth][ye]= new TaskFrame("Day: "+ weekdays[i%7]+" "+months[setmonth]+", "+(z+1)+" "+dY, z+1, months[setmonth],dY);
@@ -635,12 +652,19 @@ public class CalendarFrame extends JFrame  implements ItemListener
   	
   			T[z][setmonth][ye].setVisible(false);
 			T[z][setmonth][ye].setLocation(500,100);
- 			
+			
+			 
  		    DayButtons[z][setmonth][ye]= new JButton();
  		    DayButtons[z][setmonth][ye].setText(Integer.toString(z+1));
  		   DayButtons[z][setmonth][ye].setForeground(Color.LIGHT_GRAY);
+ 		   
+ 		 
  		   if (td.get(Calendar.DATE) == i+1 && td.get(Calendar.YEAR) == (int)spinner.getValue() && td.get(Calendar.MONTH) == monthindex)
- 			{DayButtons[z][setmonth][ye].setForeground(Color.RED);}
+ 			{
+ 			 
+ 			   DayButtons[z][setmonth][ye].setForeground(Color.RED);
+ 			}
+ 		
  			DayButtons[z][setmonth][ye].setBorderPainted(false);
  			DayButtons[z][setmonth][ye].setFocusPainted(false);
  			DayButtons[z][setmonth][ye].setContentAreaFilled(false);
@@ -657,6 +681,9 @@ public class CalendarFrame extends JFrame  implements ItemListener
 		     z--;
   		}
   		
+  
+  		
+  	
   		
   		
   		
@@ -688,8 +715,8 @@ public class CalendarFrame extends JFrame  implements ItemListener
 		           
 		 }
 		
-	
-		
+		//inital task frame thatt pop up with calendar frame when the program run
+		T[td.get(Calendar.DATE)-1][monthindex][td.get(Calendar.YEAR)-2000].setVisible(true);
 		
 
 		int yea = (Integer)yModel.getValue()-2000;
