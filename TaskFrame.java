@@ -58,7 +58,8 @@ class TaskFrame extends JFrame implements ActionListener
 		list = new JList();
 	    list.setModel(sortedList);
 
-		Color skyBlue = new Color(235,250,250);
+		//Color skyBlue = new Color(235,250,250);
+		Color skyBlue = new Color(240,248,255);
 		list.setBackground(skyBlue);
 		list.setBorder(BorderFactory.createLineBorder(Color.LIGHT_GRAY, 2));
 		
