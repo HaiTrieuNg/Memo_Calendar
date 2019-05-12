@@ -599,9 +599,6 @@ public class CalendarFrame extends JFrame  implements ItemListener
 	  
 	   
 	      
-	      
-	     
-	      
 	      //INITIAL FRAME
 	    cal.set((Integer)yModel.getValue(), monthindex, 1);//year, month,day
 		int offset = cal.get(Calendar.DAY_OF_WEEK) - 1;
@@ -622,19 +619,6 @@ public class CalendarFrame extends JFrame  implements ItemListener
   		
   		pre.set((Integer)spinner.getValue(), setmonth, 1);
   		int z = pre.getActualMaximum(Calendar.DAY_OF_MONTH)-1;
-  		
-  		
-  		
-  		
-  		
-  		
-  		
-  		
-  		
-  		
-  		
-  		
-  		
   		
   		
   		
@@ -682,13 +666,6 @@ public class CalendarFrame extends JFrame  implements ItemListener
   		}
   		
   
-  		
-  	
-  		
-  		
-  		
-  		
-  		
   		
 		for (int i = 0; i < cal.getActualMaximum(Calendar.DAY_OF_MONTH); ++i)
 		{   
