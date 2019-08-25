@@ -1,8 +1,0 @@
-CS 151
-Final Project
-Remaining Tasks
-
-
-The navigation can go as far as the Gregorian Calendar can make it (for now, we allow 2000-2050, figured out that it  should be 1019-2999)
-
-When you click on a particular date, the current view on frame 2 will change accordingly (not pop up a new frame but change the frame)
